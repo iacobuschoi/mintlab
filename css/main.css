@@ -179,9 +179,18 @@ body {
 
 .footer{
     margin-top:50px;
+    padding:40px 0 0 50px;
     height:400px;
     width:100%;
-    font-size: large;
-    color: white;
+    font-family: "Montserrat", sans-serif;
+    color: grey;
     background-color: black;
+}
+
+.footer-title{
+    font-size: xx-large;
+    span{
+        font-weight: bold;
+        color: white;
+    }
 }
