@@ -39,4 +39,3 @@ let lastHeight = window.innerHeight;
 setInterval(() => {
     resizeEvent();
 }, 500);
-
