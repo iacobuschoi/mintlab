@@ -11,7 +11,7 @@ const handleTopBar = (useClassName, unuseClassName) => {
 };
 
 window.addEventListener("scroll", () => {
-  console.log(topBar);
+  // console.log(topBar);
   if (window.scrollY > topBar.offsetHeight) {
     if (beforeScrollY.pop() < window.scrollY) {
       handleTopBar(HIDDEN_CLASSNAME, SHOWN_CLASSNAME);
