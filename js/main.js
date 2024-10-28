@@ -2,20 +2,21 @@ const leftContainer = document.querySelector('.left-container');
 const rightContainer = document.querySelector('.right-container');
 const bottomContainer = document.querySelector('.bottom-container');
 
-const leftContainerWrap = document.querySelector('.left-container-wrap');
-const rightContainerWrap = document.querySelector('.right-container-wrap');
-const bottomContainerWrap = document.querySelector('.bottom-container-wrap');
+// const leftContainerWrap = document.querySelector('.left-container-wrap');
+// const rightContainerWrap = document.querySelector('.right-container-wrap');
+// const bottomContainerWrap = document.querySelector('.bottom-container-wrap');
 
-// left -76
-// right 45
-// bottom 65
+// left -60
+// right 32
+// bottom 49
 function setContainerPosition(l,r,b) {
-    leftContainerWrap.style.transform = `translateX(${-76 + l}%)`;
-    rightContainerWrap.style.transform = `translateX(${45 - r}%)`;
-    bottomContainerWrap.style.transform = `translateY(${65 - b}%)`;
+    leftContainer.style.transform = `translateX(${-60 + l}%)`;
+    rightContainer.style.transform = `translateX(${32 - r}%)`;
+    bottomContainer.style.transform = `translateY(${49 - b}%)`;
 }
 
 leftContainer.addEventListener('mouseenter', ()=>{
+    console.log("left");
     setContainerPosition(30,-20,-2);
 })
 leftContainer.addEventListener('mouseleave',()=>{
@@ -23,6 +24,7 @@ leftContainer.addEventListener('mouseleave',()=>{
 })
 
 rightContainer.addEventListener('mouseenter', ()=>{
+    console.log("right");
     setContainerPosition(-5,20,-2);
 })
 rightContainer.addEventListener('mouseleave',()=>{
@@ -30,6 +32,7 @@ rightContainer.addEventListener('mouseleave',()=>{
 })
 
 bottomContainer.addEventListener('mouseenter', ()=>{
+    console.log("bottom");
     setContainerPosition(-5,-20,40);
 })
 bottomContainer.addEventListener('mouseleave',()=>{
