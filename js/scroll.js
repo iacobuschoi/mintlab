@@ -15,6 +15,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > topBar.offsetHeight) {
     if (beforeScrollY.pop() < window.scrollY) {
       handleTopBar(HIDDEN_CLASSNAME, SHOWN_CLASSNAME);
+      handleTopBarSide(HIDDEN_CLASSNAME, SHOWN_CLASSNAME);
     } else {
       handleTopBar(SHOWN_CLASSNAME, HIDDEN_CLASSNAME);
     }
