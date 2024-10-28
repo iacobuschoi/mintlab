@@ -2,11 +2,13 @@ const topBarNav = document.querySelector('.top-bar-nav');
 const logo = document.querySelector('.logo');
 const topBarOption = document.querySelector('.top-bar-option');
 const topBarSide = document.querySelector('.top-bar-side');
-const gap = 100;
+const gap = 180;
 const navGapPx = getComputedStyle(document.getElementsByClassName('top-bar-nav')[0]).gap;
 const navGap = Number(navGapPx.substring(0,navGapPx.length-2))
 const deletedItem = [];
 const deletedGap = [];
+const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+
 topBarSideOn = false;
 
 function gapDetected() {
@@ -59,22 +61,38 @@ const handleTopBarSide = (useClassName, unuseClassName) => {
     else topBarSideOn=false;
 };
 
-topBarOption.addEventListener('mouseenter',()=>{
-    handleTopBarSide(SHOWN_CLASSNAME, HIDDEN_CLASSNAME);
-})
-
 topBarSideFlag = false;
 topBarSide.addEventListener('mouseenter',()=>{
+    if(isMobile) return;
     console.log("true");
     topBarSideFlag=true;
 })
 topBarSide.addEventListener('mouseleave',()=>{
+    if(isMobile) return;
     topBarSideFlag=false;
     handleTopBarSide(HIDDEN_CLASSNAME, SHOWN_CLASSNAME);
 })
+
+topBarOption.addEventListener('mouseenter',()=>{
+    if(isMobile) return;
+    handleTopBarSide(SHOWN_CLASSNAME, HIDDEN_CLASSNAME);
+})
 topBarOption.addEventListener('mouseleave',()=>{
+    if(isMobile){
+        return;
+        handleTopBarSide(HIDDEN_CLASSNAME, SHOWN_CLASSNAME);
+    }
     setTimeout(() => {
         if(!topBarSideFlag) handleTopBarSide(HIDDEN_CLASSNAME, SHOWN_CLASSNAME);
-    }, 500);
+    }, 150);
 })
 
+topBarOption.addEventListener('click',()=>{
+    if(!isMobile) return;
+    if(topBarSideOn){
+        handleTopBarSide(HIDDEN_CLASSNAME, SHOWN_CLASSNAME);
+    }
+    else{
+        handleTopBarSide(SHOWN_CLASSNAME, HIDDEN_CLASSNAME);
+    }
+})
