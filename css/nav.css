@@ -10,7 +10,7 @@
 }
 .top-bar {
     z-index: 2;
-    background-color: hsla(0, 0%, 100%, 0.5);
+    background-color: hsla(0, 0%, 100%);
     position:fixed;
     /* height: 40px; */
     height:var(--height);

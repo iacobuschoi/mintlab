@@ -1,41 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.card');
     const totalCards = cards.length;
-    const visibleCards = 3;
+    visibleCards = 3;
+    lastVisibleCards = 3;
+    if(window.innerWidth<480){
+        visibleCards = 1;
+    }
+    else if(window.innerWidth<768){
+        visibleCards = 2;
+    }
     let currentIndex = 0;
 
+    window.addEventListener('resize',()=>{
+        
+        if(window.innerWidth<480){
+            lastVisibleCards = visibleCards;
+            visibleCards = 1;
+        }
+        else if(window.innerWidth<768){
+            lastVisibleCards = visibleCards;
+            visibleCards = 2;
+        }
+        else{
+            lastVisibleCards = visibleCards;
+            visibleCards = 3;
+        }
+        if(lastVisibleCards != visibleCards){
+            updateCards();
+        }
+        console.log(visibleCards);
+    })
     // Function to update the displayed cards based on the current index with animation
     function updateCards(direction) {
         // Hide the first/last card with fade-out animation
-        if (direction === 'left') {
-            const firstCard = cards[currentIndex];
-            firstCard.style.opacity = '0';
-            setTimeout(() => {
-                firstCard.style.display = 'none';
-            }, 500); // Wait for the fade-out animation to complete (0.5s)
-        } else if (direction === 'right') {
-            const lastVisibleCardIndex = (currentIndex + visibleCards - 1) % totalCards;
-            const lastCard = cards[lastVisibleCardIndex];
-            lastCard.style.opacity = '0';
-            setTimeout(() => {
-                lastCard.style.display = 'none';
-            }, 500);
-        }
-
-        // Show the new set of cards after a delay for the fade-out to complete
-        setTimeout(() => {
-            cards.forEach((card, index) => {
-                if (index >= currentIndex && index < currentIndex + visibleCards) {
-                    card.style.display = 'flex'; // Show card
-                    card.style.opacity = '0'; // Start with opacity 0
-                    setTimeout(() => {
-                        card.style.opacity = '1'; // Fade in
-                    }, 50); // Add slight delay for smooth transition
-                } else {
-                    card.style.display = 'none'; // Hide the other cards
-                }
-            });
-        }, 500); // Delay to synchronize with fade-out
+        // if (direction === 'left') {
+        //     const lastVisibleCardIndex = (currentIndex + visibleCards - 1) % totalCards;
+        //     const firstCard = cards[currentIndex];
+        //     const lastCard = cards[lastVisibleCardIndex];
+        //     firstCard.style.opacity = '0';
+        //     firstCard.style.display = 'none';
+        //     // firstCard.classList.add("left-hide");
+        //     // setTimeout(() => {
+        //     //     firstCard.classList.remove("left-hide");
+        //     // }, 200);
+        // } else if (direction === 'right') {
+        //     const lastVisibleCardIndex = (currentIndex + visibleCards - 1) % totalCards;
+        //     const firstCard = cards[currentIndex];
+        //     const lastCard = cards[lastVisibleCardIndex];
+        //     // lastCard.style.opacity = '0';
+        //     // lastCard.style.display = 'none';
+        //     firstCard.classList.add("right-hide");
+        //     setTimeout(() => {
+        //         firstCard.classList.remove("right-hide");
+        //     }, 300);
+        // }
+        cards.forEach((card, index) => {
+            if (index >= currentIndex && index < currentIndex + visibleCards) {
+                card.style.display = 'flex'; // Show card
+                card.style.opacity = '1';
+            } else {
+                card.style.display = 'none'; // Hide the other cards
+            }
+        });
 
         updateIndicator(); // Update the visual indicator in the bottom section
     }
@@ -72,6 +98,18 @@ document.addEventListener('DOMContentLoaded', function() {
             bottomContainer.appendChild(dot);
         }
     }
+    setInterval(()=>{
+        console.log('interval');
+        if(currentIndex + visibleCards < totalCards){
+            currentIndex+=1;
+            updateCards('right');
+        }
+        else{
+            currentIndex = 0;
+            updateCards();
+        }
+    },4000)
 
     updateCards();
 });
+

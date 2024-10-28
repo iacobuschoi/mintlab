@@ -16,7 +16,7 @@ function gapDetected() {
 }
 
 function resizeEvent() {
-    while(gapDetected()) {
+    while(topBarNav.firstElementChild && gapDetected()) {
         if(document.querySelector('.top-bar-nav-item')){
             deletedItem.push(topBarNav.firstElementChild);
             deletedGap.push(topBarNav.firstElementChild.offsetWidth);
@@ -24,6 +24,7 @@ function resizeEvent() {
             // topBarNav.removeChild(topBarNav.firstElementChild);
         }
     }
+    
     while(deletedItem.length > 0 && window.innerWidth - logo.offsetWidth - topBarNav.offsetWidth > navGap + gap + deletedGap[deletedGap.length-1]){
         topBarNav.insertBefore(topBarSide.firstElementChild, topBarNav.firstChild);
         // topBarSide.removeChild(topBarSide.firstElementChild);
