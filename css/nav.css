@@ -8,6 +8,13 @@
 :root{
     --height: 40px;
 }
+
+.top-bar-nav-item{
+    a:hover{
+        font-size: 101%;
+        color:#69aa70;
+    }
+}
 .top-bar {
     z-index: 2;
     background-color: hsla(0, 0%, 100%);
@@ -67,11 +74,11 @@
   
 @keyframes hide {
     from {
-      opacity: 1;
+        opacity: 1;
     }
     to {
-      opacity: 0;
-      visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
     }
 }
   
@@ -81,11 +88,12 @@
   
 @keyframes show {
     from {
-      visibility: hidden;
-      opacity: 0;
+
+        visibility: hidden;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
