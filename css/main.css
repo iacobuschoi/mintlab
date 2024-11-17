@@ -394,7 +394,63 @@ body {
         width:70%;
     }
 }
-
+.members{
+    display:flex;
+    flex-direction: row;
+}
+.members-member{
+    display:flex;
+    flex-direction: column;
+}
+.members-member-description{
+    font-family: "Montserrat", sans-serif;
+    width: 210px;
+    align-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight:400;
+    font-size: 1rem;
+    line-height:150%;
+    span{
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}
+.members-professor{
+    display: flex;
+}
+.members-img{
+    width: 210px;
+    height: 280px;
+    position: relative;
+    overflow:hidden;
+    margin: 20px 30px 20px 0;
+    img{
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 280px;
+    }
+}
+.members-professor-description{
+    font-family: "Montserrat", sans-serif;
+    width: 500px;
+    align-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 20px 0 20px 0;
+    text-align: left;
+    font-weight:400;
+    font-size: 1rem;
+    span{
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+}
 /* .right-hide {
     animation: right-hide 0.3s linear forwards;
 }
