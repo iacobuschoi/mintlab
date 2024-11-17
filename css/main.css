@@ -2,7 +2,7 @@
     z-index: 0;
     margin: 0;
     padding: 0;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 
@@ -28,7 +28,8 @@ body {
     margin-bottom: 50px;
 }
 .research-container{
-    filter: drop-shadow(0 0 10px rgb(200, 200, 200));
+    /* filter: drop-shadow(0 0 10px rgb(200, 200, 200)); */
+    filter: none;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -132,16 +133,17 @@ body {
 .home-title-research{
     width:100%;
     margin: 0;
-    padding: 35px 10px 0 0;
+    padding: 35px 10px 10px 0;
     font-size: 2.5rem;
+    font-weight: 400;
     text-align: left;
-    border-bottom:4px solid #7bc685;
+    border-bottom:1px solid black;
 }
 .home-title-research-description{
     width:100%;
     width: 70%;
     margin: 0;
-    padding: 20px 20% 10px 0;
+    padding: 20px 0 10px 0;
     width: auto;
     text-align: left;
     font-weight:400;
@@ -149,7 +151,7 @@ body {
 }
 .home-title-researching{
     font-size: 2rem;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .home-container {
     width: 100%;
@@ -177,6 +179,12 @@ body {
     .home-title{
         width: 900px;
     }
+    .home-title-research{
+        width:780px;
+    }
+    .home-title-research-description{
+        width:780px;
+    }
 } 
   
 @media all and (min-width:768px) and (max-width:1024px) { 
@@ -189,6 +197,12 @@ body {
     }
     .home-title{
         width: 700px;
+    }
+    .home-title-research{
+        width:580px;
+    }
+    .home-title-research-description{
+        width:580px;
     }
 } 
   
@@ -204,6 +218,17 @@ body {
     .home-title{
         width: 400px;
         font-size: 2rem;
+    }
+    
+    .research-container{
+        padding: 0 30px 30px 30px;
+    }
+    .home-title-research{
+        width:340px;
+    }
+    .home-title-research-description{
+        width:340px;
+        font-size: 1rem;
     }
 } 
   
@@ -221,6 +246,19 @@ body {
         font-size: 1.5rem;
         margin-top: 80px;
         margin-bottom: 20px;
+    }
+    
+    .research-container{
+        padding: 0 5px 5px 5px;
+    }
+    .home-title-research{
+        width:290px;
+        margin:0;
+    }
+    .home-title-research-description{
+        width:290px;
+        margin: 0;
+        font-size: 1rem;
     }
 }
 
