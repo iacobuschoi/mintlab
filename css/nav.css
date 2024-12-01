@@ -16,13 +16,14 @@
     }
 }
 .top-bar {
+    /* filter: drop-shadow(0 0 5px rgb(200, 200, 200)); */
     z-index: 2;
     background-color: hsla(0, 0%, 100%);
     position:fixed;
     /* height: 40px; */
     height:var(--height);
     width: 100%;
-    border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
     /* padding: 5px; */
     display: flex;
     justify-content: space-between;
