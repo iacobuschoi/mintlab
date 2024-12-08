@@ -29,7 +29,7 @@ body {
 }
 .research-container{
     filter: drop-shadow(0 0 10px rgb(200, 200, 200));
-    /* filter: none; */
+    filter: none;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@ body {
     font-weight: bold;
     color: whitesmoke;
     position: absolute;
-    transform:rotate(-67deg) translateX(240px) translateY(1180px);
+    transform:rotate(-67deg) translateX(220px) translateY(1180px);
 }
 
 .right-container-wrap {
@@ -95,8 +95,8 @@ body {
     font-weight: bold;
     color: whitesmoke;
     position: absolute;
-    border: solid 1px black;
-    transform:rotate(67deg) translateX(500px) translateY(100px);
+    /* border: solid 1px black; */
+    transform:rotate(67deg) translateX(250px) translateY(80px);
 }
 
 .bottom-container-wrap {
@@ -118,6 +118,15 @@ body {
     width: 100%;
     background-color: #69AA70;
     clip-path: polygon(0 14%, 100% 0%, 100% 12%, 0 26%);
+}
+.bottom-container-label-text {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    position: absolute;
+    border: solid 1px black;
+    transform:rotate(0deg) translateX(0px) translateY(0px);
 }
 
 .top-container-wrap {
@@ -446,6 +455,16 @@ body {
     .members-professor-description{
         width: 400px;
     }    
+    /* 여기 수정해주세요 */
+    .left-container-label-text{
+        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+    }
+    .right-container-label-text{
+        transform:rotate(67deg) translateX(250px) translateY(80px);
+    }
+    .bottom-container-label-text{
+        transform:rotate(0deg) translateX(0px) translateY(0px);
+    }
 } 
   
 
@@ -523,6 +542,16 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    /* 여기 수정해주세요 */
+    .left-container-label-text{
+        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+    }
+    .right-container-label-text{
+        transform:rotate(67deg) translateX(250px) translateY(80px);
+    }
+    .bottom-container-label-text{
+        transform:rotate(0deg) translateX(0px) translateY(0px);
+    }
 } 
   
 
@@ -593,5 +622,15 @@ body {
     }
     .members{
         flex-direction: column;
+    }
+    /* 여기 수정해주세요 */
+    .left-container-label-text{
+        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+    }
+    .right-container-label-text{
+        transform:rotate(67deg) translateX(250px) translateY(80px);
+    }
+    .bottom-container-label-text{
+        transform:rotate(0deg) translateX(0px) translateY(0px);
     }
 }
