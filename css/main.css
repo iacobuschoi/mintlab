@@ -65,7 +65,7 @@ body {
     font-weight: bold;
     color: whitesmoke;
     position: absolute;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     transform:rotate(-67deg) translateX(220px) translateY(1180px);
 }
 
@@ -127,6 +127,7 @@ body {
     color: whitesmoke;
     position: absolute;
     /* border: solid 1px black; */
+    opacity: 1;
     transform:rotate(-6deg) translateX(300px) translateY(118px);
 }
 
@@ -144,6 +145,35 @@ body {
     font-weight: bold;
     color: whitesmoke;
     padding: 0 0 0 30px;
+}
+
+.hidden {
+    animation: hide 0.2s linear forwards;
+}
+  
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+  
+.shown {
+    animation: show 0.2s linear forwards;
+}
+  
+@keyframes show {
+    from {
+
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .home-title {
@@ -432,22 +462,21 @@ body {
     .home-title-research-description{
         width:780px;
     }
-    /* 여기 수정해주세요 */
     .top-container{
         font-size: 1.6rem;
         padding-left: 25px;
     }
     .left-container-label-text{
         font-size: 1.6rem;
-        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+        transform:rotate(-67deg) translateX(180px) translateY(970px);
     }
     .right-container-label-text{
         font-size: 1.6rem;
-        transform:rotate(67deg) translateX(250px) translateY(80px);
+        transform:rotate(67deg) translateX(250px) translateY(60px);
     }
     .bottom-container-label-text{
         font-size: 1.6rem;
-        transform:rotate(0deg) translateX(0px) translateY(0px);
+        transform:rotate(-6deg) translateX(250px) translateY(100px);
     }
 }
 
@@ -472,22 +501,21 @@ body {
     .members-professor-description{
         width: 400px;
     }    
-    /* 여기 수정해주세요 */
     .top-container{
         font-size: 1.3rem;
         padding-left: 22px;
     }
     .left-container-label-text{
         font-size: 1.3rem;
-        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+        transform:rotate(-67deg) translateX(140px) translateY(752px);
     }
     .right-container-label-text{
         font-size: 1.3rem;
-        transform:rotate(67deg) translateX(250px) translateY(80px);
+        transform:rotate(68deg) translateX(160px) translateY(50px);
     }
     .bottom-container-label-text{
         font-size: 1.3rem;
-        transform:rotate(0deg) translateX(0px) translateY(0px);
+        transform:rotate(-6deg) translateX(200px) translateY(75px);
     }
 } 
   
@@ -566,22 +594,21 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    /* 여기 수정해주세요 */
     .top-container{
         padding-left: 12px;
         font-size: 0.8rem;
     }
     .left-container-label-text{
         font-size: 0.8rem;
-        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+        transform:rotate(-67.5deg) translateX(80px) translateY(428px);
     }
     .right-container-label-text{
         font-size: 0.8rem;
-        transform:rotate(67deg) translateX(250px) translateY(80px);
+        transform:rotate(68deg) translateX(90px) translateY(30px);
     }
     .bottom-container-label-text{
         font-size: 0.8rem;
-        transform:rotate(0deg) translateX(0px) translateY(0px);
+        transform:rotate(-6deg) translateX(105px) translateY(40px);
     }
 } 
   
@@ -654,21 +681,20 @@ body {
     .members{
         flex-direction: column;
     }
-    /* 여기 수정해주세요 */
     .top-container{
         padding-left: 12px;
         font-size: 0.7rem;
     }
     .left-container-label-text{
         font-size: 0.7rem;
-        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+        transform:rotate(-67.5deg) translateX(60px) translateY(316.5px);
     }
     .right-container-label-text{
         font-size: 0.7rem;
-        transform:rotate(67deg) translateX(250px) translateY(80px);
+        transform:rotate(67.5deg) translateX(70px) translateY(30px);
     }
     .bottom-container-label-text{
         font-size: 0.7rem;
-        transform:rotate(0deg) translateX(0px) translateY(0px);
+        transform:rotate(-6deg) translateX(60px) translateY(28px);
     }
 }
