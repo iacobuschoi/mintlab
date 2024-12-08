@@ -65,6 +65,7 @@ body {
     font-weight: bold;
     color: whitesmoke;
     position: absolute;
+    border: solid 1px black;
     transform:rotate(-67deg) translateX(220px) translateY(1180px);
 }
 
@@ -125,8 +126,8 @@ body {
     font-weight: bold;
     color: whitesmoke;
     position: absolute;
-    border: solid 1px black;
-    transform:rotate(0deg) translateX(0px) translateY(0px);
+    /* border: solid 1px black; */
+    transform:rotate(-6deg) translateX(300px) translateY(118px);
 }
 
 .top-container-wrap {
@@ -202,26 +203,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-@media all and (min-width:1024px) and (max-width:1279px) { 
-    .home-map-container{
-        --width: 900px;
-        --height: 495px
-    }
-    .home-container{
-        height: 800px;
-    }
-    .home-title{
-        width: 900px;
-    }
-    .home-title-research{
-        width:780px;
-    }
-    .home-title-research-description{
-        width:780px;
-    }
 }
 
 .footer{
@@ -434,13 +415,49 @@ body {
     }
 }
 
+@media all and (min-width:1024px) and (max-width:1279px) { 
+    .home-map-container{
+        --width: 900px;
+        --height: 495px
+    }
+    .home-container{
+        height: 800px;
+    }
+    .home-title{
+        width: 900px;
+    }
+    .home-title-research{
+        width:780px;
+    }
+    .home-title-research-description{
+        width:780px;
+    }
+    /* 여기 수정해주세요 */
+    .top-container{
+        font-size: 1.6rem;
+        padding-left: 25px;
+    }
+    .left-container-label-text{
+        font-size: 1.6rem;
+        transform:rotate(-67deg) translateX(220px) translateY(1180px);
+    }
+    .right-container-label-text{
+        font-size: 1.6rem;
+        transform:rotate(67deg) translateX(250px) translateY(80px);
+    }
+    .bottom-container-label-text{
+        font-size: 1.6rem;
+        transform:rotate(0deg) translateX(0px) translateY(0px);
+    }
+}
+
 @media all and (min-width:768px) and (max-width:1024px) { 
     .home-map-container{
         --width: 700px;
         --height: 385px
     }
     .home-container{
-        height: 700px;
+        height: 750px;
     }
     .home-title{
         width: 700px;
@@ -456,13 +473,20 @@ body {
         width: 400px;
     }    
     /* 여기 수정해주세요 */
+    .top-container{
+        font-size: 1.3rem;
+        padding-left: 22px;
+    }
     .left-container-label-text{
+        font-size: 1.3rem;
         transform:rotate(-67deg) translateX(220px) translateY(1180px);
     }
     .right-container-label-text{
+        font-size: 1.3rem;
         transform:rotate(67deg) translateX(250px) translateY(80px);
     }
     .bottom-container-label-text{
+        font-size: 1.3rem;
         transform:rotate(0deg) translateX(0px) translateY(0px);
     }
 } 
@@ -543,13 +567,20 @@ body {
         justify-content: space-between;
     }
     /* 여기 수정해주세요 */
+    .top-container{
+        padding-left: 12px;
+        font-size: 0.8rem;
+    }
     .left-container-label-text{
+        font-size: 0.8rem;
         transform:rotate(-67deg) translateX(220px) translateY(1180px);
     }
     .right-container-label-text{
+        font-size: 0.8rem;
         transform:rotate(67deg) translateX(250px) translateY(80px);
     }
     .bottom-container-label-text{
+        font-size: 0.8rem;
         transform:rotate(0deg) translateX(0px) translateY(0px);
     }
 } 
@@ -561,7 +592,7 @@ body {
         --height: 165px
     }
     .home-container{
-        height: 360px;
+        height: 400px;
     }
     .home-title{
         width: 300px;
@@ -624,13 +655,20 @@ body {
         flex-direction: column;
     }
     /* 여기 수정해주세요 */
+    .top-container{
+        padding-left: 12px;
+        font-size: 0.7rem;
+    }
     .left-container-label-text{
+        font-size: 0.7rem;
         transform:rotate(-67deg) translateX(220px) translateY(1180px);
     }
     .right-container-label-text{
+        font-size: 0.7rem;
         transform:rotate(67deg) translateX(250px) translateY(80px);
     }
     .bottom-container-label-text{
+        font-size: 0.7rem;
         transform:rotate(0deg) translateX(0px) translateY(0px);
     }
 }
