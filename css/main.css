@@ -284,6 +284,7 @@ body {
         color:white;
         background-color: black;
         opacity: 0.5;
+        border: 0;
     }
 }
 .card-section{
@@ -358,6 +359,7 @@ body {
     }
     .card-section{
         width:76%;
+        height: 300px;
     }
     .card-section-side{
         width:12%;
@@ -501,6 +503,11 @@ body {
     .members-professor-description{
         width: 400px;
     }    
+    .members-professor-img{
+        img{
+            height:240px;
+        }
+    }
     .top-container{
         font-size: 1.3rem;
         padding-left: 22px;
@@ -556,6 +563,9 @@ body {
             font-size: 1.5rem;
             font-weight: 400;
         }
+    }
+    .professor-professor-description{
+        text-align: left;
     }
     .members-img{
         width: 180px;
@@ -618,16 +628,18 @@ body {
         --width: 300px;
         --height: 165px
     }
-    .home-container{
-        height: 400px;
-    }
     .home-title{
         width: 300px;
         font-size: 1.5rem;
         margin-top: 100px;
-        margin-bottom: 40px;
+        margin-bottom: 40px;    
     }
-    
+    .home-container{
+        height: 500px;
+    }
+    .card-container-title{
+        margin: 50px 0 10px;
+    }
     .research-container{
         padding: 0 5px 5px 5px;
     }
@@ -653,6 +665,10 @@ body {
             font-size: 1.5rem;
             font-weight: 400;
         }
+    }
+    
+    .professor-professor-description{
+        text-align: left;
     }
     .members-img{
         width: 180px;
