@@ -100,10 +100,8 @@ function setLabelText(l,r,b){
     }
 }
 leftContainer.addEventListener('mouseenter', ()=>{
-    // console.log("left");
     setContainerPosition(30,-20,-2);
     setLabelText(1,0,0);
-    // leftContainerTextDescription.classList.remove(MAIN_HIDDEN_TEXT_CLASSNAME);
 })
 leftContainer.addEventListener('mouseleave',()=>{
     setContainerPosition(0,0,0);
@@ -111,7 +109,6 @@ leftContainer.addEventListener('mouseleave',()=>{
 })
 
 rightContainer.addEventListener('mouseenter', ()=>{
-    // console.log("right");
     setContainerPosition(-5,20,-2);
     setLabelText(0,1,0);
 })
@@ -121,7 +118,6 @@ rightContainer.addEventListener('mouseleave',()=>{
 })
 
 bottomContainer.addEventListener('mouseenter', ()=>{
-    // console.log("bottom");
     setContainerPosition(-5,-20,40);
     setLabelText(0,0,1);
 })
@@ -147,7 +143,6 @@ function untyping(element, text1, text2, speed = 10, elementIdx){
         if(typeTogs[elementIdx]==0 && textIdxs[elementIdx] >= 0){
             textIdxs[elementIdx]--;
             element.innerHTML = format(text1,text2,textIdxs[elementIdx]);
-            console.log(element.innerHTML);
             setTimeout(untype,speed);
         }
     }
@@ -170,7 +165,6 @@ function togOn(elementIdx){
     for(i=0; i<3; i++){
         typeTogs[i]= i==elementIdx?1:0;
         if(i==elementIdx){
-            console.log(i,"typing");
             typing(
                 textElements[elementIdx],
                 titles[elementIdx],
@@ -181,7 +175,6 @@ function togOn(elementIdx){
             textElements[elementIdx].classList.remove(MAIN_HIDDEN_TEXT_CLASSNAME);
         }
         else{
-            console.log(i,"untyping");
             untyping(
                 textElements[i],
                 titles[i],

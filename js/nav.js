@@ -40,7 +40,6 @@ function resizeEvent() {
 }
 
 window.addEventListener('resize',()=>{
-    // console.log();
     resizeEvent();
 })
 
@@ -65,7 +64,6 @@ const handleTopBarSide = (useClassName, unuseClassName) => {
 topBarSideFlag = false;
 topBarSide.addEventListener('mouseenter',()=>{
     if(isMobile) return;
-    console.log("true");
     topBarSideFlag=true;
 })
 topBarSide.addEventListener('mouseleave',()=>{

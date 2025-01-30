@@ -28,32 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if(lastVisibleCards != visibleCards){
             updateCards();
         }
-        console.log(visibleCards);
     })
     // Function to update the displayed cards based on the current index with animation
     function updateCards(direction) {
-        // Hide the first/last card with fade-out animation
-        // if (direction === 'left') {
-        //     const lastVisibleCardIndex = (currentIndex + visibleCards - 1) % totalCards;
-        //     const firstCard = cards[currentIndex];
-        //     const lastCard = cards[lastVisibleCardIndex];
-        //     firstCard.style.opacity = '0';
-        //     firstCard.style.display = 'none';
-        //     // firstCard.classList.add("left-hide");
-        //     // setTimeout(() => {
-        //     //     firstCard.classList.remove("left-hide");
-        //     // }, 200);
-        // } else if (direction === 'right') {
-        //     const lastVisibleCardIndex = (currentIndex + visibleCards - 1) % totalCards;
-        //     const firstCard = cards[currentIndex];
-        //     const lastCard = cards[lastVisibleCardIndex];
-        //     // lastCard.style.opacity = '0';
-        //     // lastCard.style.display = 'none';
-        //     firstCard.classList.add("right-hide");
-        //     setTimeout(() => {
-        //         firstCard.classList.remove("right-hide");
-        //     }, 300);
-        // }
         cards.forEach((card, index) => {
             if (index >= currentIndex && index < currentIndex + visibleCards) {
                 card.style.display = 'flex'; // Show card
@@ -66,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateIndicator(); // Update the visual indicator in the bottom section
     }
 
-    // Left button click: shift cards to the left with animation
     document.querySelector('.card-section-side:first-child button').addEventListener('click', () => {
         if(currentIndex>0){
                 currentIndex -= 1;
@@ -99,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     setInterval(()=>{
-        console.log('interval');
         if(currentIndex + visibleCards < totalCards){
             currentIndex+=1;
             updateCards('right');
